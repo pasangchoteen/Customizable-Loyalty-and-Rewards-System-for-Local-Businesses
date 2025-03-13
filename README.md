@@ -1,3 +1,3 @@
-# Customizable-Loyalty-and-Rewards-System-for-Local-Businesses
+# PerkUp: Customizable-Loyalty-and-Rewards-System-for-Local-Businesses
 
 This is a project.
