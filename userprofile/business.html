@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perk Up Dashboard</title>
+    <!-- This is the start of Bootstrap and Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- This is the end of Bootstrap and Font Awesome -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        /* This is the start of the Banner section */
+        .banner {
+            height: 220px;
+            background: linear-gradient(to right, #3494e6, #ec6ead);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        /* This is the end of the Banner section */
+        .dashboard-card {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            background: white;
+        }
+        .customer-picture {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .modal-body ul {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+       
+        .progress-purple {
+            height: 8px;
+            border-radius: 5px;
+            background-color: #6c5ce7;
+        }
+        .progress-blue {
+            height: 8px;
+            border-radius: 5px;
+            background-color: #3494e6;
+        }
+        .progress-pink {
+            height: 8px;
+            border-radius: 5px;
+            background-color: #ec6ead;
+        }
+
+        .brand-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- This is the start of Admin Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="logo.jpg" alt="User Profile Logo" class="brand-logo">
+                <span>PerkUp</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#rewardsModal">Rewards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#customerModal">Customers</a></li>
+                </ul>
+                
+                <button class="btn btn-outline-secondary">
+                    <i class="fas fa-sign-out-alt me-1"></i> Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- This is the end of Admin Navbar -->
+
+    <!-- This is the start of Banner section -->
+    <div class="container">
+        <div class="banner">
+            PerkUp Business Dashboard
+        </div>
+    </div>
+    <!-- This is the end of Banner section -->
+
+    <!-- This is the start of Customers Modal -->
+    <div class="modal fade" id="customerModal" tabindex="-1" aria-labelledby="customerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Manage Customers</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <img src="1.jpg" class="customer-picture"> Timothy Hardy
+                            <button class="btn btn-outline-primary btn-sm" onclick="manageCustomer('Timothy Hardy')">Manage</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <img src="2.jpg" class="customer-picture"> David Miller
+                            <button class="btn btn-outline-primary btn-sm" onclick="manageCustomer('David Miller')">Manage</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <img src="3.jpg" class="customer-picture"> Sarah Johnson
+                            <button class="btn btn-outline-primary btn-sm" onclick="manageCustomer('Sarah Johnson')">Manage</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <img src="4.jpg" class="customer-picture"> Emily Davis
+                            <button class="btn btn-outline-primary btn-sm" onclick="manageCustomer('Emily Davis')">Manage</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <img src="5.jpg" class="customer-picture"> Michael Brown
+                            <button class="btn btn-outline-primary btn-sm" onclick="manageCustomer('Michael Brown')">Manage</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This is the end of Customers Modal -->
+
+    <!-- This is the start of Rewards Modal -->
+    <div class="modal fade" id="rewardsModal" tabindex="-1" aria-labelledby="rewardsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Eligible Customers for Rewards</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <img src="3.jpg" class="customer-picture"> Sarah Johnson
+                            <span class="badge bg-success">Eligible</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <img src="4.jpg" class="customer-picture me"> Emily Davis
+                            <span class="badge bg-success">Eligible</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <img src="5.jpg" class="customer-picture"> Michael Brown
+                            <span class="badge bg-warning">Nearly Eligible</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This is the end of Rewards Modal -->
+
+    <!-- This is the start of Dashboard Overview -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="dashboard-card">
+                    <h6>Total Customers</h6>
+                    <h3>560</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dashboard-card">
+                    <h6>Active Rewards</h6>
+                    <h3>24</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dashboard-card">
+                    <h6>Premium Members</h6>
+                    <h3>120</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dashboard-card">
+                    <h6>Revenue Generated</h6>
+                    <h3>$12k</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This is the end of Dashboard Overview -->
+
+    <!-- This is the start of Recent Activity -->
+    <div class="container mt-4">
+        <h4>Recent Activity</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th>Action</th>
+                    <th>Details</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Timothy Hardy</td>
+                    <td>Redeemed reward</td>
+                    <td>Woolworths $100 Gift Card</td>
+                    <td>10 mins ago</td>
+                </tr>
+                <tr>
+                    <td>Michael Brown</td>
+                    <td>Earned points</td>
+                    <td>Purchase at BigW Store</td>
+                    <td>45 mins ago</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- This is the end of Recent Activity -->
+
+     <!-- This is the start of User Engagement -->
+     <div class="container mt-4">
+        <h4>User Engagement</h4>
+        <div class="card p-3">
+            <div class="mb-2">Weekly Active Users <div class="progress"><div class="progress-bar progress-purple" style="width: 78%"></div></div></div>
+            <div class="mb-2">Point Redemption Rate <div class="progress"><div class="progress-bar progress-blue" style="width: 62%"></div></div></div>
+            <div class="mb-2">Referral Success <div class="progress"><div class="progress-bar progress-pink" style="width: 45%"></div></div></div>
+        </div>
+    </div>
+    <!-- This is the end of User Engagement -->
+
+    <!-- This is the start of Footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center mb-2">
+                <img src="logo.jpg" alt="User Profile Logo" class="brand-logo me-2" style="width: 24px; height: 24px;">
+                <span>PerkUp</span>
+            </div>
+            <p class="mb-0 small">
+                <span>© 2025 PerkUp. All rights reserved.</span>
+            </p>
+        </div>
+    </footer>
+    <!-- This is the end of Footer -->
+
+    <!-- This is the start of Required scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function manageCustomer(name) {
+            alert("Managing " + name);
+        }
+    </script>
+    <!-- This is the end of Required scripts -->
+</body>
+</html>
