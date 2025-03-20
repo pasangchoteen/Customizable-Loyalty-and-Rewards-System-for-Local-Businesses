@@ -5,102 +5,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="PerkUp is a customizable loyalty and rewards platform for local businesses. Build customer relationships and drive growth.">
   <title>PerkUp - Loyalty & Rewards Platform</title>
-  <link rel="stylesheet" href="styleshomepage.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <!-- Header Section -->
-  <header class="header">
-    <div class="logo">
-      <h1><a href="#home">PerkUp</a></h1>
+  <header class="bg-primary text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo">
+        <h1>
+            <a href="homepage.html" class="text-white text-decoration-none d-flex align-items-center">
+                <img src="logo.jpg" alt="User Profile Logo" class="brand-logo me-2">
+                PerkUp
+            </a>
+        </h1>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="login.html">Sign Up</a></li>
-        <li><a href="signup.html">Login</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="#features" class="nav-link text-white">Features</a></li>
+          <li class="nav-item"><a href="#how-it-works" class="nav-link text-white">How It Works</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link text-white">Sign Up</a></li>
+          <li class="nav-item"><a href="signup.html" class="nav-link text-white">Login</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <h2>Empowering Local Businesses to Build Lasting Customer Relationships</h2>
-      <p>A customizable loyalty and rewards platform that drives engagement, retention, and growth.</p>
-      <div class="cta-buttons">
-        <a href="#business" class="cta-btn">Get Started (Business)</a>
-        <a href="#customer" class="cta-btn">Join Now (Customer)</a>
+  <section id="hero" class="hero py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="display-4">Empowering Local Businesses to Build Lasting Customer Relationships</h2>
+      <p class="lead">A customizable loyalty and rewards platform that drives engagement, retention, and growth.</p>
+      <div class="cta-buttons mt-4">
+        <a href="#business" class="btn btn-primary btn-lg me-3">Get Started (Business)</a>
+        <a href="#customer" class="btn btn-outline-primary btn-lg">Join Now (Customer)</a>
       </div>
     </div>
   </section>
 
   <!-- How It Works Section -->
-  <section id="how-it-works" class="how-it-works">
-    <h2>How PerkUp Works</h2>
-    <div class="steps">
-      <div class="step">
-        <h3>Earn Rewards</h3>
-        <p>Make purchases and earn points to unlock amazing rewards.</p>
-      </div>
-      <div class="step">
-        <h3>Referral Program</h3>
-        <p>Refer friends and get rewarded when they make a purchase.</p>
-      </div>
-      <div class="step">
-        <h3>Track Activity</h3>
-        <p>Monitor your points and redeem rewards through your dashboard.</p>
+  <section id="how-it-works" class="how-it-works py-5 bg-white">
+    <div class="container text-center">
+      <h2 class="mb-5">How PerkUp Works</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="step">
+            <h3>Earn Rewards</h3>
+            <p>Make purchases and earn points to unlock amazing rewards.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="step">
+            <h3>Referral Program</h3>
+            <p>Refer friends and get rewarded when they make a purchase.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="step">
+            <h3>Track Activity</h3>
+            <p>Monitor your points and redeem rewards through your dashboard.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Key Features Section -->
-  <section id="features" class="features">
-    <h2>Key Features of PerkUp</h2>
-    <div class="feature">
-      <h3>Location-Based Promotions</h3>
-      <p>Get personalized promotions when you're near participating businesses.</p>
-    </div>
-    <div class="feature">
-      <h3>Referral Program</h3>
-      <p>Earn rewards by referring your friends and family.</p>
-    </div>
-    <div class="feature">
-      <h3>Tiered Membership</h3>
-      <p>Unlock exclusive rewards as you engage more with businesses.</p>
-    </div>
-    <div class="feature">
-      <h3>Real-Time Notifications</h3>
-      <p>Stay up-to-date with instant push notifications for offers.</p>
+  <section id="features" class="features py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-5">Key Features of PerkUp</h2>
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <div class="feature">
+            <h3>Location-Based Promotions</h3>
+            <p>Get personalized promotions when you're near participating businesses.</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="feature">
+            <h3>Referral Program</h3>
+            <p>Earn rewards by referring your friends and family.</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="feature">
+            <h3>Tiered Membership</h3>
+            <p>Unlock exclusive rewards as you engage more with businesses.</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="feature">
+            <h3>Real-Time Notifications</h3>
+            <p>Stay up-to-date with instant push notifications for offers.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section class="testimonials">
-    <h2>What Our Users Are Saying</h2>
-    <div class="testimonial">
-      <p>"PerkUp helped our small business increase customer loyalty and engagement!" - Business Owner</p>
-    </div>
-    <div class="testimonial">
-      <p>"I love the referral program – it's easy and rewarding!" - Customer</p>
+  <section class="testimonials py-5 bg-white text-center">
+    <div class="container">
+      <h2 class="mb-5">What Our Users Are Saying</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="testimonial">
+            <p>"PerkUp helped our small business increase customer loyalty and engagement!" - Business Owner</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="testimonial">
+            <p>"I love the referral program – it's easy and rewarding!" - Customer</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer Section -->
-  <footer class="footer">
-    <nav>
-      <ul>
-        <li><a href="#privacy">Privacy Policy</a></li>
-        <li><a href="#terms">Terms of Service</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </nav>
-    <div class="social">
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-      <a href="#">Instagram</a>
+  <footer class="bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between">
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="#privacy" class="nav-link text-white">Privacy Policy</a></li>
+          <li class="nav-item"><a href="#terms" class="nav-link text-white">Terms of Service</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link text-white">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="social">
+        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+      </div>
     </div>
   </footer>
+
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
